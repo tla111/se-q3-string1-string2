@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Timothy La, Referenced StackOverflow for the third problem, & Coach John W helped me with Problem 3"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -12,7 +12,7 @@ __author__ = "???"
 
 # Instructions:
 # Complete each of these string exercises in the same way as the
-# previous String1 excercises.
+# previous String1 exercises.
 
 # D. verbing
 # Given a string, if its length is at least 3, add 'ing' to its
@@ -23,8 +23,15 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    if len(s) >= 3 and s[-3:] == "ing":  # also could use endswith()
+        return s + "ly"
+    if len(s) >= 3:
+        return s + "ing"
+    else:
+        return s
+
+
+print()
 
 
 # E. not_bad
@@ -37,23 +44,52 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    notPos = s.find("not")
+    badPos = s.find("bad")
+    if notPos < badPos and s.endswith("!"):
+        return s[0:notPos] + "good" + "!"
+    if notPos < badPos:
+        return s[0:notPos] + "good"
+    else:
+        return s
+
+
+print()
 
 
 # F. front_back
 # Consider dividing a string into two halves.
 # If the length is even, the front and back halves are the same
-# length. If the length is odd, we'll say that the extra
+# length. If the length is odd, we'll say that the front
 # character goes in the front half.
 #   e.g. 'abcde', the front half is 'abc', the back half 'de'.
 # Given 2 strings, a and b, return a string of the form:
 #   a-front + b-front + a-back + b-back
 
-
+# Used StackOverflow to help me https://stackoverflow.com/questions/31358564/finding-the-length-of-first-half-of-a-string-using-string-slicing-in-python
 def front_back(a, b):
-    # your code here
-    return
+    frontCharA = ""
+    frontCharB = ""
+    backCharA = ""
+    backCharB = ""
+    # if len(a) % 2 == 0 and len(b) % 2 == 0:
+    #     return a[0:len(a) // 2] + b[0:len(b) // 2] + a[len(a) // 2:] + b[len(b) // 2:]
+    if not len(a) % 2 == 0:
+        frontCharA = a[0:len(a) // 2 + 1]
+        backCharA = a[len(a) // 2 + 1:]
+    if not len(b) % 2 == 0:
+        frontCharB = b[0: len(b) // 2 + 1]
+        backCharB = b[len(b) // 2 + 1:]
+    if len(a) % 2 == 0:
+        frontCharA = a[0:len(a) // 2]
+        backCharA = a[len(a) // 2:]
+    if len(b) % 2 == 0:
+        frontCharB = b[0: len(b) // 2]
+        backCharB = b[len(b) // 2:]
+    return frontCharA + frontCharB + backCharA + backCharB
+
+
+print()
 
 
 # Provided simple test() function used in main() to print
