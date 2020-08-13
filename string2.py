@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Timothy La, Referenced StackOverflow for the third problem, & Coach John W helped me with Problem 3"
+__author__ = "Timothy La (tla111), Referenced StackOverflow for the third problem, & Coach John W helped me with Problem 3"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
