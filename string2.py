@@ -31,9 +31,6 @@ def verbing(s):
         return s
 
 
-print()
-
-
 # E. not_bad
 # Given a string, find the first occurrence of the substrings
 # 'not' and 'bad'. If the 'bad' follows the 'not', replace
@@ -46,15 +43,13 @@ print()
 def not_bad(s):
     notPos = s.find("not")
     badPos = s.find("bad")
+    # if notPos < badPos and s.endswith("!"):
     if notPos < badPos and s.endswith("!"):
         return s[0:notPos] + "good" + "!"
     if notPos < badPos:
         return s[0:notPos] + "good"
     else:
         return s
-
-
-print()
 
 
 # F. front_back
@@ -87,9 +82,6 @@ def front_back(a, b):
         frontCharB = b[0: len(b) // 2]
         backCharB = b[len(b) // 2:]
     return frontCharA + frontCharB + backCharA + backCharB
-
-
-print()
 
 
 # Provided simple test() function used in main() to print

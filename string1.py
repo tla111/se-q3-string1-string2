@@ -33,9 +33,6 @@ def donuts(count):
     else:
         return "Number of donuts: many"
 
-
-print()
-
 # B. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 characters of the original string.
@@ -52,7 +49,6 @@ def both_ends(s):
         return ""
 
 
-print()
 # C. fix_start
 # Given a string s, return a string where all occurrences
 # of its first character have been changed to '*', except
@@ -70,9 +66,6 @@ def fix_start(s):
     return s[0] + sliceWord
 
 
-print()
-
-
 # D. mix_up
 # Given strings a and b, return a single string with a and
 # b separated by a space '<a> <b>', except swap the first
@@ -88,8 +81,6 @@ def mix_up(a, b):
     secondWord = b[0:2] + a[2:]
     return secondWord + " " + firstWord
 
-
-print()
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
