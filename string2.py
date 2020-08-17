@@ -4,7 +4,11 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Timothy La (tla111), Referenced StackOverflow for the third problem, & Coach John W helped me with Problem 3"
+__author__ = "Timothy La (tla111)"
+"""
+Referenced StackOverflow for the third problem
+& Coach John W helped me with Problem 3
+"""
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -61,14 +65,18 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form:
 #   a-front + b-front + a-back + b-back
 
-# Used StackOverflow to help me https://stackoverflow.com/questions/31358564/finding-the-length-of-first-half-of-a-string-using-string-slicing-in-python
+# Used StackOverflow to help me
+# https://stackoverflow.com
+# /questions/31358564/finding-the-length-of-
+# first-half-of-a-string-using-string-slicing-in-python
 def front_back(a, b):
     frontCharA = ""
     frontCharB = ""
     backCharA = ""
     backCharB = ""
     # if len(a) % 2 == 0 and len(b) % 2 == 0:
-    #     return a[0:len(a) // 2] + b[0:len(b) // 2] + a[len(a) // 2:] + b[len(b) // 2:]
+    #     return a[0:len(a) // 2] + b[0:len(b) // 2]
+    # + a[len(a) // 2:] + b[len(b) // 2:]
     if not len(a) % 2 == 0:
         frontCharA = a[0:len(a) // 2 + 1]
         backCharA = a[len(a) // 2 + 1:]
