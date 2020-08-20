@@ -33,6 +33,13 @@ def donuts(count):
     else:
         return "Number of donuts: many"
 
+# Option 1 - If the count is less than 10
+    # The function will print "Number of donuts: " + the count
+        # Need to turn the number into a string to concat with the string,
+        # "Number of donuts: "
+# Option 2 - If the count is greater than 10
+    # The function will print out "Number of donuts: many"
+
 # B. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 characters of the original string.
@@ -48,6 +55,13 @@ def both_ends(s):
     else:
         return ""
 
+# Option 1 - If s (the string) has more than 2 characters
+    # Split the first two letters of the string [0:2]
+    # Split the last two letters of the string
+    # Combine the two
+        # [Where to start : Where to end]
+# Option 2 - If s (the string) has less than 2 characters
+    # Output an empty string
 
 # C. fix_start
 # Given a string s, return a string where all occurrences
@@ -61,10 +75,17 @@ def both_ends(s):
 
 
 def fix_start(s):
-    partWord = s.replace(s[0], "*")
-    sliceWord = partWord[1:]
-    return s[0] + sliceWord
+    part_word = s.replace(s[0], "*")
+    slice_word = part_word[1:]
+    return s[0] + slice_word
 
+# 1. Use the replace method to turn the letters of the string that matches
+    # the first letter into the special character "*"
+    # and store it into a variable to be used later
+# 2. Slice the string from part_word and store all the letters
+    # after the first letters into a variable
+# 3. Combine the first letter of the string that has not been modified with
+    # slice_word (the modified string with the "*" as letters)
 
 # D. mix_up
 # Given strings a and b, return a single string with a and
@@ -77,9 +98,15 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    firstWord = a[0:2] + b[2:]
-    secondWord = b[0:2] + a[2:]
-    return secondWord + " " + firstWord
+    first_word = a[0:2] + b[2:]
+    second_word = b[0:2] + a[2:]
+    return second_word + " " + first_word
+
+# 1. Store the first two letters of a and
+    # the letters after the first two characters of b into a variable
+# 2. Store the first two letters of b and
+    # the letters after the first two charaters of a into a variable
+# 3. Output the second variable + a space (" ") + the first variable
 
 
 # Provided simple test() function used in main() to print
