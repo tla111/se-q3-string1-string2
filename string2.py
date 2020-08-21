@@ -34,6 +34,13 @@ def verbing(s):
     else:
         return s
 
+# Option 1 - If the length of s is greater than or equal to 3 and
+#   the last three letters ends with "ing"
+#       Output s with "ly" attached to the end of the string
+# Option 2 - If the length of s is greater than or equal to 3
+#   Output s with "ing" attached to the end of the string
+# Option 3 - If the length of s is less than 3
+#   Output s
 
 # E. not_bad
 # Given a string, find the first occurrence of the substrings
@@ -55,6 +62,15 @@ def not_bad(s):
     else:
         return s
 
+# 1. Check to see whether s has the word "not" and store in a variable
+# 2. Check to see whether s has the word "bad" and store in a variable
+# Option 1 - If the word "not" is before "bad" in the string and
+#   s ends with "!"
+#       Output the words before "not" + "good" + "!"
+# Option 2 - If the word "not" is before "bad" in the string
+#   Output the words before "not" + "good"
+# Option 3 - If the word "bad" is before "not"
+#   Output s
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -69,14 +85,13 @@ def not_bad(s):
 # https://stackoverflow.com
 # /questions/31358564/finding-the-length-of-
 # first-half-of-a-string-using-string-slicing-in-python
+
+
 def front_back(a, b):
     frontCharA = ""
     frontCharB = ""
     backCharA = ""
     backCharB = ""
-    # if len(a) % 2 == 0 and len(b) % 2 == 0:
-    #     return a[0:len(a) // 2] + b[0:len(b) // 2]
-    # + a[len(a) // 2:] + b[len(b) // 2:]
     if not len(a) % 2 == 0:
         frontCharA = a[0:len(a) // 2 + 1]
         backCharA = a[len(a) // 2 + 1:]
@@ -91,9 +106,24 @@ def front_back(a, b):
         backCharB = b[len(b) // 2:]
     return frontCharA + frontCharB + backCharA + backCharB
 
+    # Option 1 - If the length of a is not divisible by 2
+    #   Store the first half of the word plus the leftover letter
+    #   Store the the second half of the word plus the leftover letter
+    # Option 2 - If the length of b is not divisible by 2
+    #   Store the first half of the word plus the leftover letter
+    #   Store the the second half of the word plus the leftover letter
+    # Option 3 - If the length of a is divisible by 2
+    #   Store the first half of the word
+    #   Store the the second half of the word
+    # Option 4 - If the length of b is divisible by 2
+    #   Store the first half of the word
+    #   Store the the second half of the word
+    # Output frontCharA + frontCharB + backCharA + backCharB
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
